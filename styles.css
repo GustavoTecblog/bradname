@@ -1,0 +1,430 @@
+/* Primeira seção */
+
+section.sect-1{
+    background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/home-background.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+}
+
+/* Cabeçalho da seção 1 */
+
+header#header{
+    display: flex;
+    align-items: center;
+    gap: 6em;
+    color: white;
+    padding-top: 1%;
+}
+
+
+
+/* Navegação dos links  */
+
+nav{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a:hover{
+    border-bottom: 2px solid #23A6F0;
+}
+
+nav #left-links ul{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav #right-links ul{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+
+#right-links a.button{
+    display: flex;
+    background-color: #23A6F0;
+    border-radius: 4px;
+    width: 170px;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 6% 15% 6% 5%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0px;
+}
+
+#right-links a.button img{
+    margin-left: 10px;
+}
+
+/* Menu hamburguer */
+
+label img{
+    width: 30px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+nav#nav{
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: -50px;
+    transition: 1.2s;
+    text-align: center;
+}
+
+#menu-hamburguer{
+    position: absolute;
+    top: 0;
+    right: 150px;
+}
+
+/* Click para aparecer o hamburger */
+
+#menu-hamburguer input[type="checkbox"]:checked ~ nav#nav{
+    transform: translateY(-300px);
+    transition: 1.2s;
+}
+
+#menu-hamburguer ul{
+    top: 70px;
+    position: absolute;
+    width: 100%;
+}
+
+#menu-hamburguer a{
+    display: block;
+    padding: 17px 50px 17px 40px;
+    color: white;
+    font-weight: 600;
+}
+
+#menu-hamburguer a:hover{
+    border: none;
+    background-color: rgba(107, 106, 106, 0.3);
+}
+
+#menu-hamburguer label div{
+    padding: 15px 15px 0 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* Fim hamburguer */
+
+/* Conteudo da seção 1 */
+
+div.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 5% 10% 5%;
+}
+
+div.content h1{
+    text-align: center;
+    max-width: 520px;
+    font-size: 300%;
+    color: white;
+    margin-bottom: 2%;
+}
+div.content p{
+    text-align: center;
+    max-width: 520px;
+    font-size: 1.05em;
+    color: white;
+    margin-bottom: 2%;
+}
+
+div.content div.button {
+    display: flex;
+    max-width: 520px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+div.button .get {
+    flex-grow: 1;
+    color: white;
+    background-color: #23A6F0;
+    border-radius: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+div.button .learn{
+    flex-grow: 1;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+/* Cards flutuando infinito */
+
+.cards{
+    padding: 0% 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card-1, .card-2, .card-3{
+    flex-grow: 1;
+    padding: 40px;
+    height: 180px;
+    background-color: white;
+    bottom: 50px;
+    position: relative;
+    box-shadow: -5px -10px 30px rgb(181, 179, 179), 6px 9px 15px rgb(255, 255, 255);
+    -webkit-box-shadow: -5px -10px 30px rgb(181, 179, 179), 6px 9px 15px rgb(255, 255, 255);
+    -moz-box-shadow: -5px -10px 30px rgb(181, 179, 179), 6px 9px 15px rgb(255, 255, 255);
+    animation: flutuacao 3.7s ease-in-out infinite;
+}
+
+/* Códigos para flutuar */
+
+@keyframes flutuacao{
+    0%, 100%{
+        transform: translateY(0px);        
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+.card-3{
+    background-color: #23A6F0;
+    color: white;
+}
+
+/* Cards seção 3 */
+
+#sect-3-cards{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 4% 8%;
+    background-color: white;
+}
+
+#sect-3-cards img{
+    margin: 25% 0 25% 0;
+}
+
+.sect-3-card-1, .sect-3-card-2, .sect-3-card-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 230px;
+}
+
+#sect-3-cards p{
+    max-width: 300px;
+    text-align: center;
+    color: #252b42;
+    font-weight: 500;
+}
+
+.sect-3-card-1:hover, .sect-3-card-2.sect-3-card-2:hover, .sect-3-card-3:hover{
+    background-color:#D5D5D5;
+    transition: 0.65s;
+}
+
+/* Seção 4 */
+
+section.sect-4{
+    margin-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 3% 8%;
+}
+
+section.sect-4 h2{
+    font-size: 2em;
+    color: #252b42;
+}
+
+section.sect-4 p{
+    color: #252b42;
+    text-align: center;
+    max-width: 420px;
+}
+
+/* Seção 5 */
+
+#sect-5{
+    padding: 0 8%;
+}
+
+.cards-sect-5{
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.cards-sect-5 p{
+    max-width: 200px;
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #737373;
+}
+
+/* Seção 5 - Cards & Efeito de Zoom */
+
+.card-1-sect-5, .card-2-sect-5, .card-3-sect-5{
+    border: 1px solid #ECECEC;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #252b42;
+    padding: 40px 0;
+    margin-top: 40px;
+    transition: 0.5s;
+    background-color: white;
+}
+
+.card-1-sect-5:hover, .card-2-sect-5:hover, .card-3-sect-5:hover{
+    transform: scale(1.075);
+}
+
+/* Rodapé do site */
+
+footer{
+    margin: 0 8% 5% 8%;
+    background-color: #303C88;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 0px;
+}
+
+input.botao{
+    position: relative;
+    bottom: 1px;
+    padding: 15px;
+    border-radius: 5px 0px 0px 5px;
+    max-width: 500px;
+    border: none;
+    margin: 0;
+}
+
+footer .link-footer{
+    padding: 14px;
+    background-color: #23A6F0;
+    border-radius: 0px 5px 5px 0px;
+    margin: 0;
+}
+
+
+
+
+
+
+/* Barra de rolagem  */
+
+body::-webkit-scrollbar {
+    width: 13px;
+}
+
+body::-webkit-scrollbar-thumb {   
+    background-color: rgb(66, 66, 66);
+    border-radius: 15px; 
+}
+
+/* Tirar o MENU antigo */
+
+
+
+@media(max-width: 958px){
+    div #navegacao{
+        display: none;
+    }
+    .logo h3{
+        margin-top: 10px;
+    }
+}
+
+/* Adicionar o MENU hamburguer  */
+
+@media(min-width: 957px){
+    header#header{
+        justify-content: left;
+    }
+    div #menu-hamburguer{
+        display: none;
+        justify-content: left;
+    }
+}
+
+/* Melhor o comportamento dos cards em relação a seção de baixo deles (cards) */
+
+@media(max-width: 736px){
+    .card-1, .card-2, .card-3{
+        position: relative;
+        top: 20px;
+    }
+    .sect-3-card-1, .sect-3-card-2, .sect-3-card-3{
+        position: relative;
+        top: 40px;
+    }
+    footer{
+        justify-content: center;
+        flex-direction: column;
+    }
+    footer .right{
+        padding-top: 40px;
+    }
+
+    section.sect-4{
+       margin-top: 50px;
+    }
+    #sect-3{
+        border-bottom: 27px solid rgb(255, 255, 255);
+    }
+}
+
+/* Melhorar o titulo do texto - Seção 1 */
+
+@media(max-width: 450px){
+    div.content h1{
+        text-align: center;
+        max-width: 520px;
+        font-size: 200%;
+        color: white;
+    }
+    div.content{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+
+
